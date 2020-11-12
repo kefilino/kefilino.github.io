@@ -167,6 +167,9 @@ article.landing hr {
         background: #ffd793;
         color: black;
     }
+    article.landing {
+        margin: 20px auto;
+    }
     article.landing p {
         width: 100%;
         padding: 10px 0;
@@ -194,6 +197,9 @@ article.landing hr {
     }
 }
 @media (max-width: 768px) {
+    article.landing {
+        margin: 0 auto;
+    }
     article.landing h1 {
         font-size: 30px;
     }
