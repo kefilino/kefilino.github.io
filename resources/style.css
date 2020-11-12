@@ -187,3 +187,11 @@ article.landing hr {
         margin: 20px auto;
     }
 }
+@media (max-width: 375px) {
+    article.landing p {
+        font-size: 16px;
+    }
+    article.landing h1 {
+        font-size: 24px;
+    }
+}
