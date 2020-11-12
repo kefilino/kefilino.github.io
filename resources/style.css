@@ -105,6 +105,10 @@ article.landing hr {
     margin: 80px auto 40px;
     padding-top: 20px;
 }
+.container embed {
+    height: 75vh;
+    width: 100%;
+}
 .container .row {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
