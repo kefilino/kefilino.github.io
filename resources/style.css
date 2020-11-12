@@ -1,3 +1,7 @@
+@font-face {
+    font-family: BebasNeuePro-Regular;
+    src: url(BebasNeuePro-Regular.woff);
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +9,7 @@
 }
 body {
     background-color: #fafafa;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: BebasNeuePro-Regular;
 }
 footer {
     position: fixed;
@@ -13,7 +17,6 @@ footer {
     bottom: 10px;
     margin: 0 auto;
     color: #999999;
-    font-weight: bold;
     text-align: center;
     z-index: -1;
 }
@@ -36,7 +39,7 @@ nav ul li {
 }
 nav ul li a {
     color: white;
-    font-size: 18px;
+    font-size: 30px;
     padding: 4px 8px;
     text-transform: uppercase;
     text-decoration: none;
@@ -59,24 +62,20 @@ article h1 {
 }
 article.landing {
     color: #262626;
-    margin: auto;
-    position: fixed;
+    margin: 80px auto;
     width: 80%;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     z-index: -1;
+    vertical-align: middle;
     text-align: center;
 }
 article.landing p {
-    font-size: 18px;
-    width: 50%;
+    font-size: 28px;
+    width: 100%;
     padding: 20px 0;
     margin: 0 auto;
 }
 article.landing hr {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 .checkbtn {
@@ -94,6 +93,7 @@ article.landing hr {
     padding-top: 20px;
 }
 .container .row {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     padding: 50px;
 }
@@ -121,11 +121,17 @@ article.landing hr {
 }
 @media (max-width: 952px) {
     nav ul li a {
-        font-size: 16px;
+        font-size: 24px;
+    }
+    .container {
+        width: 100%;
     }
     article h1 {
-        font-size: 30px;
+        font-size: 34px;
         padding: 10px 0;
+    }
+    article.landing {
+        margin: 40px auto;
     }
     article.landing p {
         width: 75%;
@@ -155,7 +161,7 @@ article.landing hr {
         line-height: 30px;
     }
     nav ul li a {
-        font-size: 20px;
+        font-size: 24px;
     }
     a.active, a:hover {
         background: #ffd793;
@@ -188,10 +194,15 @@ article.landing hr {
     }
 }
 @media (max-width: 768px) {
-    article.landing p {
-        font-size: 16px;
-    }
     article.landing h1 {
-        font-size: 24px;
+        font-size: 30px;
+    }
+    article.landing p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .img-me {
+        width: 200px;
     }
 }
