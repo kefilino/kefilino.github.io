@@ -87,6 +87,10 @@ article.landing p {
     padding: 20px 0;
     margin: 0 auto;
 }
+article.landing a {
+    font-size: 36px;
+    margin: 0 4px;
+}
 article.landing hr {
     width: 100%;
     margin: 0 auto;
