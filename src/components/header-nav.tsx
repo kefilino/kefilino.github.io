@@ -58,7 +58,7 @@ export default function HeaderNav() {
                   <Link
                     key={element.name}
                     href={element.href}
-                    className={`${pathname === element.href ? 'bg-emerald-900 text-white' : 'text-gray-300 transition duration-100 ease-in-out hover:bg-emerald-600 hover:text-white'} h-full content-center px-4 text-sm font-medium`}
+                    className={`${pathname === element.href ? 'bg-emerald-900 text-white border-dotted border-y-4 border-transparent border-b-emerald-600 hover:border-solid' : 'text-gray-300 hover:bg-emerald-600 hover:text-white'} transition duration-100 ease-in-out h-full content-center px-4 text-sm font-medium`}
                   >
                     {element.name}
                   </Link>
