@@ -43,7 +43,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <HeaderNav/>
-        <div className="h-px min-h-[calc(100vh-4rem)]">
+        <div className="min-h-[calc(100vh-4rem)]">
           {children}
         </div>
       </body>

@@ -9,34 +9,47 @@ interface HeaderNavLink {
   href: string
 }
 
-const headerNavLinks: Array<HeaderNavLink> = [
-  {
-    name: 'Home',
-    href: '/'
-  },
-  {
-    name: 'About',
-    href: '/about'
-  },
-  {
-    name: 'Portfolio',
-    href: '/portfolio'
-  },
-  {
-    name: 'Contact',
-    href: '/contact'
-  }
-]
-
 export default function HeaderNav() {
+  const headerNavLinks: Array<HeaderNavLink> = [
+    {
+      name: 'Home',
+      href: '/'
+    },
+    {
+      name: 'About',
+      href: '/about-me'
+    },
+    {
+      name: 'Portfolio',
+      href: '/portfolio'
+    },
+    {
+      name: 'Contact',
+      href: '/contact'
+    }
+  ];
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const openMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }
   return (
-    <nav className='sticky top-0 right-0 left-0 min-h-full bg-emerald-700'>
-      <div className='sticky z-[1000] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-emerald-700'>
+    <nav className='sticky z-[1000] top-0 right-0 left-0 min-h-full bg-emerald-700'>
+      <div className={`md:hidden ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-[calc(100%+4rem)] opacity-0'} absolute z-inherit text-center top-16 w-full bg-emerald-800 transition-all duration-300 ease-in-out`} id='mobile-menu'>
+        {headerNavLinks.map((element) => {
+          return (
+            <Link
+              key={element.name}
+              href={element.href}
+              className={`block px-3 py-3 text-base font-medium ${pathname === element.href ? 'bg-emerald-900 text-white' : 'text-gray-300 transition duration-100 ease-in-out hover:bg-emerald-600 hover:text-white'}`}
+              onClick={openMobileMenu}
+            >
+              {element.name}
+            </Link>
+          )
+        })}
+      </div>
+      <div className='sticky z-inherit mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-emerald-700'>
         <div className='flex h-16 items-center justify-between'>
           <div className='flex items-center'>
             <div className='shrink-0'>
@@ -79,19 +92,6 @@ export default function HeaderNav() {
             </button>
           </div>
         </div>
-      </div>
-      <div className={`md:hidden ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-[calc(100%+4rem)] opacity-0'} absolute z-[900] text-center w-full bg-emerald-800 transition-all duration-300 ease-in-out`} id='mobile-menu'>
-        {headerNavLinks.map((element) => {
-          return (
-            <Link
-              key={element.name}
-              href={element.href}
-              className={`block px-3 py-3 text-base font-medium ${pathname === element.href ? 'bg-emerald-900 text-white' : 'text-gray-300 transition duration-100 ease-in-out hover:bg-emerald-600 hover:text-white'}`}
-            >
-              {element.name}
-            </Link>
-          )
-        })}
       </div>
     </nav>
   );

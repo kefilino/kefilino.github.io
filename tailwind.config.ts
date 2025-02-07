@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      minHeight: {
+        inherit: 'inherit',
+      },
+      zIndex: {
+        inherit: 'inherit',
+      },
     },
   },
   plugins: [],
