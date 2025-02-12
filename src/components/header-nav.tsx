@@ -25,7 +25,7 @@ export default function HeaderNav() {
     },
     {
       name: 'Contact',
-      href: '/contact'
+      href: '/contact-me'
     }
   ];
   const pathname = usePathname();
