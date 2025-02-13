@@ -15,7 +15,7 @@ type PortfolioItem = {
 const portfolioData: Array<PortfolioItem> = [
   {
     id: 'berteman',
-    image: 'vercel.svg',
+    image: '/img/portfolio/berteman.webp',
     tags: ['2019', 'CodeIgniter'],
     title: 'Berteman',
     description: 'A social networking site where you can interact with friends, family, and people you know. Key features include posting updates, searching for users, editing profiles, and more.',
@@ -30,7 +30,7 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'sembaco',
-    image: 'vercel.svg',
+    image: '/img/portfolio/sembaco.webp',
     tags: ['2020', 'Laravel', 'Vue.js'],
     title: 'Semba.co',
     description: 'A centralized platform for information and requests related to social aid programs organized by the government or other organizations. Built with Laravel 8, Inertia.js, and Vue.js. Key features include request management, aid management, user management, and more.',
@@ -51,7 +51,7 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'latihid-clone',
-    image: 'vercel.svg',
+    image: '/img/portfolio/latihid-clone.webp',
     tags: ['2021', 'Django'],
     title: 'LatihID Homepage Clone',
     description: 'A case study project completed as part of the internship selection process by LatihID. The goal was to replicate the LatihID homepage, showcasing attention to detail and front-end development skills.',
@@ -66,12 +66,12 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'oprec-asprak-2021',
-    image: 'vercel.svg',
+    image: '/img/portfolio/oprec-asprak-2021.webp',
     tags: ['2021', 'Nuxt.js', 'Vuetify'],
     title: 'Oprec Asprak 2021',
     description: 'A website created for open recruitment of lab assistants, featuring information about responsibilities, benefits, and a CTA button for registration.',
     linkButtons: [
-      <a key="website" href="https://oprecastprak2021.netlify.app/" target="_blank" rel="noopener" className="inline-flex gap-1 items-center px-2 py-1 text-sm font-medium text-center text-base rounded-lg border-2 border-solid border-black/[.08] dark:border-white/[.145] hover:bg-zinc-200 dark:hover:bg-white/[.2] hover:border-transparent">
+      <a key="website" href="https://github.com/kefilino/frema-api" target="_blank" rel="noopener" className="dark:invert inline-flex gap-1 items-center px-2 py-1 font-medium text-sm text-center text-white rounded-lg border-2 border-transparent bg-black/[.9] hover:bg-black/[.8]">
         View Website
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
@@ -81,7 +81,7 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'sekuding',
-    image: 'vercel.svg',
+    image: '/img/portfolio/sekuding.webp',
     tags: ['2021', 'Express.js', 'Vue.js'],
     title: 'Sekuding',
     description: 'An online learning platform designed to provide IT-related courses and resources, helping users enhance their technical skills and knowledge.',
@@ -96,12 +96,12 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'kubito',
-    image: 'vercel.svg',
+    image: '/img/portfolio/kubito.webp',
     tags: ['2021', 'Unity', 'Vuforia'],
     title: 'Kubito',
     description: 'Kubito is an Android shooter game with a folklore-based story, featuring augmented reality gameplay.',
     linkButtons: [
-      <a key="demo-video" href="https://www.youtube.com/watch?v=TwxudU005Y0" target="_blank" rel="noopener" className="inline-flex gap-1 items-center px-2 py-1 text-sm font-medium text-center text-base rounded-lg border-2 border-solid border-black/[.08] dark:border-white/[.145] hover:bg-zinc-200 dark:hover:bg-white/[.2] hover:border-transparent">
+      <a key="demo-video" href="https://github.com/kefilino/frema-api" target="_blank" rel="noopener" className="dark:invert inline-flex gap-1 items-center px-2 py-1 font-medium text-sm text-center text-white rounded-lg border-2 border-transparent bg-black/[.9] hover:bg-black/[.8]">
         Demo Video
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
@@ -111,7 +111,7 @@ const portfolioData: Array<PortfolioItem> = [
   },
   {
     id: 'frema',
-    image: 'vercel.svg',
+    image: '/img/portfolio/frema.webp',
     tags: ['2021', 'Laravel Lumen', 'Vue.js'],
     title: 'Frema',
     description: 'Frema is a marketplace website connecting students with freelance job opportunities, offering affordable services for clients while helping students gain experience.',
@@ -140,8 +140,8 @@ export default function PortfolioPage() {
           <h1 className="text-3xl font-bold text-center mb-8">My Portfolio</h1>
           <div className="flex flex-col items-stretch space-y-6">
             {portfolioData.reverse().map((item) => (
-              <div key={item.id} className="flex flex-col md:flex-row items-start hover:bg-zinc-100 dark:bg-white/[0.0125] dark:hover:bg-white/[0.05] border border-black/[.08] dark:border-white/[.145] rounded-lg shadow-sm">
-                <Image className="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg" src={item.image} alt={item.title} width="256" height="256" />
+              <div key={item.id} className="flex flex-col md:flex-row items-stretch hover:bg-zinc-100 dark:bg-white/[0.0125] dark:hover:bg-white/[0.05] border border-black/[.08] dark:border-white/[.145] rounded-lg shadow-sm">
+                <Image className="object-cover w-full rounded-t-lg h-48 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg" src={item.image} alt={item.title} width={500} height={500} />
                 <div className="flex flex-col gap-2 justify-between p-4 leading-normal">
                   <div className="flex flex-row gap-2 justify-start">
                     {item.tags.map((tag) => (
