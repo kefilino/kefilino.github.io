@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface TimelineItem {
   title: string,
   description: string,
@@ -32,9 +34,13 @@ export default function AboutMe() {
       <main className="flex flex-col gap-8 items-center w-full lg:gap-16 lg:w-3/5">
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_2fr]">
           <div className="grid place-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth={1.5} className="dark:invert size-full md:size-1/2 lg:size-full">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
+            <Image
+              src={'/img/portrait-for-web.webp'}
+              width={512}
+              height={590}
+              alt="My Portrait"
+              className="w-full h-auto md:w-1/2 lg:w-full"
+            />
           </div>
           <div className="grid grid-rows-* gap-8">
             <div className="flex flex-col gap-2">
